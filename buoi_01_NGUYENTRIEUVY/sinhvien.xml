@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class>
+    <student>
+        <name>Nguyễn Triều Vỹ</name>
+        <id>S001</id>
+        <subjects>
+            <subject>
+                <subject_name>Cơ sở dữ liệu</subject_name>
+                <score>8.5</score>
+            </subject>
+            <subject>
+                <subject_name>Lập trình Java</subject_name>
+                <score>9.0</score>
+            </subject>
+        </subjects>
+    </student>
+    <student>
+        <name>Trần Minh Tiến</name>
+        <id>S002</id>
+        <subjects>
+            <subject>
+                <subject_name>Cấu trúc dữ liệu</subject_name>
+                <score>9.5</score>
+            </subject>
+            <subject>
+                <subject_name>Lập trình Web</subject_name>
+                <score>8.0</score>
+            </subject>
+        </subjects>
+    </student>
+</class>

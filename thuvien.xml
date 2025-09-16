@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thuvien>
+    <sach>
+        <title>Lập trình Python</title>
+        <author>Nguyễn Triều Vỹ</author>
+        <year>2025</year>
+        <genre>Lập trình</genre>
+    </sach>
+    <sach>
+        <title>Anh văn căn bản</title>
+        <author>Nguyễn Minh Quân</author>
+        <year>2025</year>
+        <genre>Ngôn ngữ</genre>
+    </sach>
+    <sach>
+        <title>Thiết kế XML</title>
+        <author>Trần Minh Tiến</author>
+        <year>2025</year>
+        <genre>Thiết kế</genre>
+    </sach>
+</thuvien>
