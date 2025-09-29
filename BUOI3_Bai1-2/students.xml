@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="students.xsd">
+    <student id="S001">
+        <name>Nguyen Trieu Vy</name>
+        <dob>2004-08-07</dob>
+        <major>Cong nghe thong tin</major>
+    </student>
+    <student id="S002">
+        <name>Le Hong Linh</name>
+        <dob>2004-11-18</dob>
+        <major>Quan tri kinh doanh</major>
+    </student>
+</students>

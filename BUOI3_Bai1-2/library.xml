@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="library.xsd">
+    <book id="B001">
+        <title>Mua van dang roi</title>
+        <author>Nguyen Trieu Vy</author>
+        <year>2025</year>
+        <genre>Tinh cam</genre>
+    </book>
+    <book id="B002">
+        <title>Lop hoc tieng nhat</title>
+        <author>Le Hong Linh</author>
+        <year>2025</year>
+        <genre>Giao duc</genre>
+    </book>
+    <book id="B003">
+        <title>Huong dan choi game</title>
+        <author>Nguyen Minh Quan</author>
+        <year>2024</year>
+        <genre>Giai tri</genre>
+    </book>
+</library>

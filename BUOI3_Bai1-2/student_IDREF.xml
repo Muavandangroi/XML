@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="student_IDREF.xsd">
+    <students>
+        <student id="S1">
+            <name>Nguyen Van A</name>
+        </student>
+        <student id="S2">
+            <name>Tran Thi B</name>
+        </student>
+    </students>
+    <courses>
+        <course id="C1" name="XML Cơ bản">
+            <enroll studentRef="S1"/>
+            <enroll studentRef="S2"/>
+        </course>
+        <course id="C2" name="CSDL nâng cao">
+            <enroll studentRef="S2"/>
+        </course>
+    </courses>
+</class>
