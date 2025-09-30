@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DSSV>
+  <KHOA>
+    <MAKHOA>KH001</MAKHOA>
+    <TENKHOA>cntt</TENKHOA>
+  </KHOA>
+  <KHOA>
+    <MAKHOA>KH002</MAKHOA>
+    <TENKHOA>ktpm</TENKHOA>
+  </KHOA>
+
+  <LOP>
+    <MALOP>L01</MALOP>
+    <TENLOP>K62</TENLOP>
+    <MAKHOA>KH001</MAKHOA>
+  </LOP>
+  <LOP>
+    <MALOP>L02</MALOP>
+    <TENLOP>K63</TENLOP>
+    <MAKHOA>KH002</MAKHOA>
+  </LOP>
+
+  <SINHVIEN>
+    <MASV>SV001</MASV>
+    <HOTEN>Nguyen Van A</HOTEN>
+    <EMAIL>a@example.com</EMAIL>
+    <DIACHI>Hanoi</DIACHI>
+    <SDT>0912345678</SDT>
+    <MALOP>L01</MALOP>
+  </SINHVIEN>
+  <SINHVIEN>
+    <MASV>SV002</MASV>
+    <HOTEN>Tran Thi B</HOTEN>
+    <EMAIL>b@example.com</EMAIL>
+    <DIACHI>HCM</DIACHI>
+    <SDT>0987654321</SDT>
+    <MALOP>L02</MALOP>
+  </SINHVIEN>
+</DSSV>

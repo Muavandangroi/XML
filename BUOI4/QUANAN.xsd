@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.org/quanan"
+           xmlns="http://example.org/quanan"
+           elementFormDefault="qualified">
+
+  <!-- Ràng buộc Username, Password -->
+  <xs:simpleType name="UsernameType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="6"/>
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PasswordType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="10"/>
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="QUANAN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="KHACHHANGS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="KHACHHANG" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="MaKH" type="xs:string"/>
+                    <xs:element name="HoTen" type="xs:string"/>
+                    <xs:element name="Username" type="UsernameType"/>
+                    <xs:element name="Password" type="PasswordType"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="MONANS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MONAN" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="MaMon" type="xs:string"/>
+                    <xs:element name="TenMon" type="xs:string"/>
+                    <xs:element name="DonGia" type="xs:decimal"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="HOADONS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HOADON" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="MaHD" type="xs:string"/>
+                    <xs:element name="MaKH" type="xs:string"/>
+                    <xs:element name="NgayLap" type="xs:date"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="CTHDS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CTHD" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="MaHD" type="xs:string"/>
+                    <xs:element name="MaMon" type="xs:string"/>
+                    <xs:element name="SoLuong" type="xs:integer"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:sequence>
+    </xs:complexType>
+
+    <!-- Khóa chính & khóa ngoại -->
+    <xs:key name="KH_PK">
+      <xs:selector xpath="KHACHHANGS/KHACHHANG"/>
+      <xs:field xpath="MaKH"/>
+    </xs:key>
+
+    <xs:key name="MONAN_PK">
+      <xs:selector xpath="MONANS/MONAN"/>
+      <xs:field xpath="MaMon"/>
+    </xs:key>
+
+    <xs:key name="HD_PK">
+      <xs:selector xpath="HOADONS/HOADON"/>
+      <xs:field xpath="MaHD"/>
+    </xs:key>
+
+    <xs:keyref name="HD_FK_KH" refer="KH_PK">
+      <xs:selector xpath="HOADONS/HOADON"/>
+      <xs:field xpath="MaKH"/>
+    </xs:keyref>
+
+    <xs:keyref name="CTHD_FK_HD" refer="HD_PK">
+      <xs:selector xpath="CTHDS/CTHD"/>
+      <xs:field xpath="MaHD"/>
+    </xs:keyref>
+
+    <xs:keyref name="CTHD_FK_MON" refer="MONAN_PK">
+      <xs:selector xpath="CTHDS/CTHD"/>
+      <xs:field xpath="MaMon"/>
+    </xs:keyref>
+
+  </xs:element>
+
+</xs:schema>
